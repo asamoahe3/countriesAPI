@@ -10,7 +10,7 @@ import (
 
 // append data from country.json file to a struct type to be serve on the http server
 func init() {
-	if err := handlers.GetCountryData("./country_data.json"); err != nil {
+	if err := handlers.GetCountryData("country_data.json"); err != nil {
 		log.Fatal(err.Error())
 	} else {
 		models.CountriesData = append(models.CountriesData, handlers.RecieveCountryData.Countries...)
